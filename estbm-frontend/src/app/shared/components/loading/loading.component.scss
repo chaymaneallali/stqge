@@ -1,13 +1,15 @@
+/* ===== MODERN LOADING COMPONENT ===== */
+
 .loading-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: var(--space-8);
   text-align: center;
 
   &.loading-sm {
-    padding: 1rem;
+    padding: var(--space-4);
     
     .loading-spinner {
       width: 32px;
@@ -16,7 +18,7 @@
   }
 
   &.loading-md {
-    padding: 2rem;
+    padding: var(--space-8);
     
     .loading-spinner {
       width: 48px;
@@ -25,7 +27,7 @@
   }
 
   &.loading-lg {
-    padding: 3rem;
+    padding: var(--space-12);
     
     .loading-spinner {
       width: 64px;
@@ -36,7 +38,7 @@
 
 .loading-spinner {
   position: relative;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-6);
 
   .spinner-ring {
     position: absolute;
@@ -68,33 +70,33 @@
   }
 
   &.spinner-primary .spinner-ring {
-    border-top-color: #3b82f6;
-    border-right-color: rgba(59, 130, 246, 0.3);
+    border-top-color: var(--brand-primary);
+    border-right-color: rgba(37, 99, 235, 0.3);
   }
 
   &.spinner-secondary .spinner-ring {
-    border-top-color: #8b5cf6;
-    border-right-color: rgba(139, 92, 246, 0.3);
+    border-top-color: var(--brand-secondary);
+    border-right-color: rgba(124, 58, 237, 0.3);
   }
 
   &.spinner-accent .spinner-ring {
-    border-top-color: #10b981;
-    border-right-color: rgba(16, 185, 129, 0.3);
+    border-top-color: var(--brand-accent);
+    border-right-color: rgba(5, 150, 105, 0.3);
   }
 }
 
 .loading-message {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #374151;
-  margin-bottom: 0.5rem;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
 }
 
 .loading-description {
-  font-size: 0.9rem;
-  color: #6b7280;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-600);
   max-width: 300px;
-  line-height: 1.5;
+  line-height: var(--line-height-relaxed);
 }
 
 @keyframes spin {
@@ -106,10 +108,11 @@
   }
 }
 
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
   .loading-container {
     &.loading-lg {
-      padding: 2rem;
+      padding: var(--space-8);
       
       .loading-spinner {
         width: 48px;
@@ -119,10 +122,10 @@
   }
 
   .loading-message {
-    font-size: 1rem;
+    font-size: var(--font-size-base);
   }
 
   .loading-description {
-    font-size: 0.85rem;
+    font-size: var(--font-size-sm);
   }
 }
