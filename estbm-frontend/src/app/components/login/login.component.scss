@@ -1,13 +1,11 @@
-/* ===== MODERN LOGIN COMPONENT ===== */
+/* ===== PROFESSIONAL LOGIN ===== */
 
 .login-layout {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, 
-    var(--color-primary-50) 0%, 
-    var(--color-gray-50) 100%);
+  background: linear-gradient(135deg, var(--gray-50) 0%, var(--primary) 100%);
   padding: var(--space-4);
 }
 
@@ -20,16 +18,14 @@
     position: absolute;
     inset: 0;
     background: 
-      radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
       radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
   }
   
   .bg-gradient {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, 
-      rgba(59, 130, 246, 0.05) 0%, 
-      rgba(124, 58, 237, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%);
   }
 }
 
@@ -41,16 +37,13 @@
 
 .login-card {
   background: white;
-  border: 1px solid var(--color-gray-200);
+  border: 1px solid var(--gray-200);
   border-radius: var(--radius-3xl);
   box-shadow: var(--shadow-2xl);
   overflow: hidden;
-  animation: scaleIn 0.5s ease-out;
 
   .login-header {
-    background: linear-gradient(135deg, 
-      var(--color-primary-50), 
-      var(--color-gray-50));
+    background: linear-gradient(135deg, var(--gray-50), white);
     padding: var(--space-12) var(--space-8) var(--space-8);
     text-align: center;
 
@@ -59,15 +52,15 @@
         width: 80px;
         height: 80px;
         border-radius: var(--radius-2xl);
-        background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
         color: white;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: var(--font-size-3xl);
+        font-size: var(--text-3xl);
         margin: 0 auto var(--space-6);
         box-shadow: var(--shadow-lg);
-        transition: var(--transition-normal);
+        transition: var(--transition);
 
         &:hover {
           transform: scale(1.05);
@@ -75,27 +68,21 @@
       }
 
       .app-title {
-        font-size: var(--font-size-2xl);
-        font-weight: var(--font-weight-extrabold);
-        color: var(--color-gray-900);
+        font-size: var(--text-2xl);
+        font-weight: 800;
+        color: var(--gray-900);
         margin-bottom: var(--space-2);
-        background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
 
       .institution-name {
-        font-size: var(--font-size-lg);
-        font-weight: var(--font-weight-semibold);
-        color: var(--color-gray-700);
+        font-size: var(--text-lg);
+        font-weight: 600;
+        color: var(--gray-700);
         margin-bottom: var(--space-1);
-      }
-
-      .ministry-label {
-        font-size: var(--font-size-sm);
-        color: var(--color-gray-600);
-        margin: 0;
       }
     }
   }
@@ -104,9 +91,9 @@
     padding: var(--space-8);
 
     .form-title {
-      font-size: var(--font-size-xl);
-      font-weight: var(--font-weight-bold);
-      color: var(--color-gray-900);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--gray-900);
       text-align: center;
       margin-bottom: var(--space-8);
     }
@@ -118,12 +105,12 @@
       margin-bottom: var(--space-6);
       display: flex;
       align-items: center;
-      font-weight: var(--font-weight-medium);
+      font-weight: 500;
 
       &.alert-danger {
-        background: var(--color-error-50);
-        color: var(--color-error-700);
-        border: 1px solid var(--color-error-200);
+        background: rgba(239, 68, 68, 0.1);
+        color: var(--error);
+        border: 1px solid rgba(239, 68, 68, 0.2);
       }
     }
 
@@ -134,38 +121,38 @@
         .form-label {
           display: block;
           margin-bottom: var(--space-2);
-          font-weight: var(--font-weight-semibold);
-          color: var(--color-gray-900);
+          font-weight: 600;
+          color: var(--gray-900);
           display: flex;
           align-items: center;
 
           i {
-            color: var(--brand-primary);
+            color: var(--primary);
           }
         }
 
         .modern-input {
           width: 100%;
           padding: var(--space-4) var(--space-5);
-          border: 2px solid var(--color-gray-300);
+          border: 2px solid var(--gray-300);
           border-radius: var(--radius-xl);
-          font-size: var(--font-size-base);
-          transition: var(--transition-normal);
+          font-size: var(--text-base);
+          transition: var(--transition);
           background: white;
 
           &:focus {
             outline: none;
-            border-color: var(--brand-primary);
+            border-color: var(--primary);
             box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
           }
 
           &.is-invalid {
-            border-color: var(--color-error-500);
+            border-color: var(--error);
             box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
           }
 
           &::placeholder {
-            color: var(--color-gray-500);
+            color: var(--gray-500);
           }
         }
 
@@ -179,24 +166,24 @@
             transform: translateY(-50%);
             background: none;
             border: none;
-            color: var(--color-gray-500);
+            color: var(--gray-500);
             cursor: pointer;
             padding: var(--space-2);
             border-radius: var(--radius-md);
-            transition: var(--transition-normal);
+            transition: var(--transition);
 
             &:hover {
-              color: var(--brand-primary);
-              background: var(--color-primary-50);
+              color: var(--primary);
+              background: rgba(37, 99, 235, 0.1);
             }
           }
         }
 
         .invalid-feedback {
           margin-top: var(--space-2);
-          font-size: var(--font-size-sm);
-          color: var(--color-error-600);
-          font-weight: var(--font-weight-medium);
+          font-size: var(--text-sm);
+          color: var(--error);
+          font-weight: 500;
         }
       }
 
@@ -209,13 +196,13 @@
         .form-check-input {
           width: 18px;
           height: 18px;
-          border: 2px solid var(--color-gray-300);
+          border: 2px solid var(--gray-300);
           border-radius: var(--radius-sm);
-          transition: var(--transition-normal);
+          transition: var(--transition);
 
           &:checked {
-            background-color: var(--brand-primary);
-            border-color: var(--brand-primary);
+            background-color: var(--primary);
+            border-color: var(--primary);
           }
 
           &:focus {
@@ -225,10 +212,10 @@
         }
 
         .form-check-label {
-          font-size: var(--font-size-sm);
-          color: var(--color-gray-700);
+          font-size: var(--text-sm);
+          color: var(--gray-700);
           cursor: pointer;
-          font-weight: var(--font-weight-medium);
+          font-weight: 500;
         }
       }
 
@@ -236,17 +223,17 @@
         width: 100%;
         padding: var(--space-4) var(--space-8);
         border-radius: var(--radius-xl);
-        font-weight: var(--font-weight-bold);
-        font-size: var(--font-size-base);
-        background: var(--brand-primary);
+        font-weight: 700;
+        font-size: var(--text-base);
+        background: var(--primary);
         border: none;
         color: white;
-        transition: var(--transition-normal);
+        transition: var(--transition);
         min-height: 56px;
         box-shadow: var(--shadow-md);
 
         &:hover:not(:disabled) {
-          background: var(--color-primary-700);
+          background: var(--primary-dark);
           transform: translateY(-2px);
           box-shadow: var(--shadow-lg);
         }
@@ -272,21 +259,21 @@
       text-align: center;
       margin-top: var(--space-8);
       padding-top: var(--space-6);
-      border-top: 1px solid var(--color-gray-200);
+      border-top: 1px solid var(--gray-200);
 
       p {
-        color: var(--color-gray-600);
+        color: var(--gray-600);
         margin: 0;
-        font-weight: var(--font-weight-medium);
+        font-weight: 500;
 
         .link-primary {
-          color: var(--brand-primary);
+          color: var(--primary);
           text-decoration: none;
-          font-weight: var(--font-weight-semibold);
-          transition: var(--transition-normal);
+          font-weight: 600;
+          transition: var(--transition);
 
           &:hover {
-            color: var(--color-primary-700);
+            color: var(--primary-dark);
             text-decoration: underline;
           }
         }
@@ -295,29 +282,29 @@
   }
 
   .login-footer {
-    background: var(--color-gray-50);
+    background: var(--gray-50);
     padding: var(--space-6) var(--space-8);
     text-align: center;
-    border-top: 1px solid var(--color-gray-200);
+    border-top: 1px solid var(--gray-200);
 
     .footer-text {
-      font-size: var(--font-size-sm);
-      color: var(--color-gray-600);
+      font-size: var(--text-sm);
+      color: var(--gray-600);
       margin: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: var(--space-2);
-      font-weight: var(--font-weight-medium);
+      font-weight: 500;
 
       i {
-        color: var(--color-success-500);
+        color: var(--success);
       }
     }
   }
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .login-container {
     padding: var(--space-3);
@@ -331,15 +318,15 @@
         .logo-circle {
           width: 64px;
           height: 64px;
-          font-size: var(--font-size-2xl);
+          font-size: var(--text-2xl);
         }
 
         .app-title {
-          font-size: var(--font-size-xl);
+          font-size: var(--text-xl);
         }
 
         .institution-name {
-          font-size: var(--font-size-base);
+          font-size: var(--text-base);
         }
       }
     }
@@ -348,7 +335,7 @@
       padding: var(--space-6);
 
       .form-title {
-        font-size: var(--font-size-lg);
+        font-size: var(--text-lg);
       }
 
       .modern-input {
@@ -358,24 +345,12 @@
 
       .btn-login {
         padding: var(--space-3) var(--space-6);
-        font-size: var(--font-size-base);
+        font-size: var(--text-base);
       }
     }
   }
 }
 
-/* ===== ANIMATIONS ===== */
 @keyframes spin {
   to { transform: rotate(360deg); }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
 }

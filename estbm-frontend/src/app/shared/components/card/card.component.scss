@@ -1,11 +1,11 @@
-/* ===== MODERN CARD COMPONENT ===== */
+/* ===== PROFESSIONAL CARD COMPONENT ===== */
 
 .modern-card {
   background: white;
-  border: 1px solid var(--color-gray-200);
+  border: 1px solid var(--gray-200);
   border-radius: var(--radius-2xl);
   overflow: hidden;
-  transition: var(--transition-normal);
+  transition: var(--transition);
   box-shadow: var(--shadow-sm);
 
   &.card-elevated {
@@ -13,7 +13,7 @@
   }
 
   &.card-bordered {
-    border: 2px solid var(--color-gray-200);
+    border: 2px solid var(--gray-200);
   }
 
   &.card-hoverable:hover {
@@ -32,38 +32,38 @@
 
   /* Color variants */
   &.card-primary {
-    border-color: var(--color-primary-200);
-    background: linear-gradient(135deg, var(--color-primary-50), white);
+    border-color: rgba(37, 99, 235, 0.2);
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), white);
   }
 
   &.card-success {
-    border-color: var(--color-success-200);
-    background: linear-gradient(135deg, var(--color-success-50), white);
+    border-color: rgba(16, 185, 129, 0.2);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), white);
   }
 
   &.card-warning {
-    border-color: var(--color-warning-200);
-    background: linear-gradient(135deg, var(--color-warning-50), white);
+    border-color: rgba(245, 158, 11, 0.2);
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), white);
   }
 
   &.card-error {
-    border-color: var(--color-error-200);
-    background: linear-gradient(135deg, var(--color-error-50), white);
+    border-color: rgba(239, 68, 68, 0.2);
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.05), white);
   }
 
   &.card-info {
-    border-color: var(--color-info-200);
-    background: linear-gradient(135deg, var(--color-info-50), white);
+    border-color: rgba(14, 165, 233, 0.2);
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.05), white);
   }
 }
 
 .card-header {
   padding: var(--space-6);
-  border-bottom: 1px solid var(--color-gray-200);
+  border-bottom: 1px solid var(--gray-200);
   display: flex;
   align-items: center;
   gap: var(--space-4);
-  background: var(--color-gray-50);
+  background: var(--gray-50);
 
   .header-icon {
     width: 48px;
@@ -72,36 +72,36 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: var(--font-size-xl);
+    font-size: var(--text-xl);
     color: white;
     flex-shrink: 0;
 
     &.icon-default {
-      background: var(--color-gray-500);
+      background: var(--gray-500);
     }
 
     &.icon-primary {
-      background: var(--brand-primary);
+      background: var(--primary);
       box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
     }
 
     &.icon-success {
-      background: var(--brand-accent);
-      box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
+      background: var(--success);
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
     }
 
     &.icon-warning {
-      background: var(--color-warning-500);
+      background: var(--warning);
       box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
     }
 
     &.icon-error {
-      background: var(--color-error-500);
+      background: var(--error);
       box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
     }
 
     &.icon-info {
-      background: var(--color-info-500);
+      background: var(--info);
       box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
     }
   }
@@ -111,18 +111,18 @@
     min-width: 0;
 
     .card-title {
-      font-size: var(--font-size-xl);
-      font-weight: var(--font-weight-bold);
-      color: var(--color-gray-900);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--gray-900);
       margin: 0 0 var(--space-1) 0;
-      line-height: var(--line-height-tight);
+      line-height: 1.2;
     }
 
     .card-subtitle {
-      font-size: var(--font-size-sm);
-      color: var(--color-gray-600);
+      font-size: var(--text-sm);
+      color: var(--gray-600);
       margin: 0;
-      line-height: var(--line-height-normal);
+      line-height: 1.4;
     }
   }
 
@@ -145,11 +145,11 @@
 
 .card-footer {
   padding: var(--space-4) var(--space-6);
-  border-top: 1px solid var(--color-gray-200);
-  background: var(--color-gray-50);
+  border-top: 1px solid var(--gray-200);
+  background: var(--gray-50);
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .modern-card {
     border-radius: var(--radius-xl);
@@ -168,11 +168,11 @@
     .header-icon {
       width: 40px;
       height: 40px;
-      font-size: var(--font-size-lg);
+      font-size: var(--text-lg);
     }
 
     .header-content .card-title {
-      font-size: var(--font-size-lg);
+      font-size: var(--text-lg);
     }
   }
 

@@ -1,4 +1,4 @@
-/* ===== MODERN LOADING COMPONENT ===== */
+/* ===== PROFESSIONAL LOADING COMPONENT ===== */
 
 .loading-container {
   display: flex;
@@ -70,33 +70,33 @@
   }
 
   &.spinner-primary .spinner-ring {
-    border-top-color: var(--brand-primary);
+    border-top-color: var(--primary);
     border-right-color: rgba(37, 99, 235, 0.3);
   }
 
   &.spinner-secondary .spinner-ring {
-    border-top-color: var(--brand-secondary);
+    border-top-color: var(--secondary);
     border-right-color: rgba(124, 58, 237, 0.3);
   }
 
   &.spinner-accent .spinner-ring {
-    border-top-color: var(--brand-accent);
+    border-top-color: var(--accent);
     border-right-color: rgba(5, 150, 105, 0.3);
   }
 }
 
 .loading-message {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-gray-900);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--gray-900);
   margin-bottom: var(--space-2);
 }
 
 .loading-description {
-  font-size: var(--font-size-base);
-  color: var(--color-gray-600);
+  font-size: var(--text-base);
+  color: var(--gray-600);
   max-width: 300px;
-  line-height: var(--line-height-relaxed);
+  line-height: 1.6;
 }
 
 @keyframes spin {
@@ -108,7 +108,7 @@
   }
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .loading-container {
     &.loading-lg {
@@ -122,10 +122,10 @@
   }
 
   .loading-message {
-    font-size: var(--font-size-base);
+    font-size: var(--text-base);
   }
 
   .loading-description {
-    font-size: var(--font-size-sm);
+    font-size: var(--text-sm);
   }
 }
